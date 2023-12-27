@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		h1 {
+		    font-family: 'Cutive Mono', monospace;
+		    color: #8f83c9;
+		    text-decoration: none;
+		    text-transform: uppercase;
+		    font-size: 30px;
+		    padding: 5px;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Cutive Mono', monospace;
+			padding: 8px;
+			text-align: left;
+			margin: 7px auto;
+			width: fit-content;
+		}
+		
+		
+		.navMenu a {
+			color: #8f83c9;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 20px;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #fffff;
+		}
+
+		.border {
+			border: 1px solid #8f83c9;
+
+		}
+
+		.navMenu a:hover {
+			color: #88aee7;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+	<h1>Navigation</h1>
+		<a id="ideas" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-moon fa-sm" style="--fa-primary-color: #8f83c9;"></i> Ideas</a>
+		<a id="writing" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-moon fa-sm" style="--fa-primary-color: #8f83c9;"></i> Writing</a>
+		<a id="learning" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-moon fa-sm" style="--fa-primary-color: #8f83c9;"></i> Learning</a>
+		<a id="GW" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-moon fa-sm" style="--fa-primary-color: #8f83c9;"></i> Goals + Wishlist</a>
+		<a id="lists" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-moon fa-sm" style="--fa-primary-color: #8f83c9;"></i> Lists</a>
+	<a id="VB" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-moon fa-sm" style="--fa-primary-color: #8f83c9;"></i> Vision Board</a>
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'ideas')
+				window.open("https://www.notion.so/linzies-life/Ideas-2e51030f2a1843a79af9b995aba8f13c", '_blank').focus();
+			else if (id == "writing")
+				window.open("https://www.notion.so/linzies-life/Writing-631b6c4d7aaa4888aebee02032aa0ae3?pvs=4", '_blank').focus();
+			else if (id == "learning")
+				window.open("https://www.notion.so/linzies-life/Writing-631b6c4d7aaa4888aebee02032aa0ae3?pvs=4", '_blank').focus();
+			else if (id == "GW")
+				window.open("https://www.notion.so/linzies-life/Goals-Wishlist-a892cbcc933d4baa9be3ae4a4bb9aced?pvs=4", '_blank').focus();
+			else if (id == "lists")
+				window.open("https://www.notion.so/linzies-life/Lists-704c9c8a52d946338c3df8eff219c1f1?pvs=4", '_blank').focus();
+			else if (id == "VB")
+				window.open("https://www.notion.so/linzies-life/Vision-Board-ca519e554ad64afbb77865b9e879db41?pvs=4", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
